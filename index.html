@@ -20,16 +20,17 @@
         /* Шапка */
         .top-nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            padding: 30px 80px;
+            padding: 30px 0;
             background: transparent;
             position: absolute;
             width: 100%;
             z-index: 10;
         }
+        .logo { font-size: 1.1rem; letter-spacing: 4px; font-weight: 600; text-transform: uppercase; }
 
-        /* Главная секция (Hero) */
+        /* Главная секция */
         .hero {
             height: 100vh;
             position: relative;
@@ -41,6 +42,7 @@
 
         /* ПК Версия */
         @media screen and (min-width: 769px) {
+            .top-nav { justify-content: space-between; padding: 30px 80px; }
             .hero {
                 background-image: linear-gradient(to right, rgba(0,0,0,0.6), transparent), url('hero-photo.jpeg');
                 background-position: center center;
@@ -48,48 +50,54 @@
             }
         }
 
-        /* МОБИЛЬНАЯ Версия (Контент сверху) */
+        /* МОБИЛЬНАЯ Версия */
         @media screen and (max-width: 768px) {
             .hero {
                 background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('mobile.jpg') !important;
                 background-position: center center !important;
                 padding: 0 30px;
-                align-items: flex-start; /* Прижимаем к верху */
+                align-items: flex-start; 
                 justify-content: center;
                 text-align: center;
             }
             .hero-content {
-                margin-top: 140px; /* Отступ от логотипа сверху */
+                margin-top: 95px; 
             }
-            .top-nav { padding: 30px; justify-content: center; } /* Лого по центру на мобиле */
+            .hero p { font-size: 0.9rem !important; letter-spacing: 3px !important; }
+            .btn-outline { font-size: 0.7rem !important; letter-spacing: 3px !important; }
         }
 
         .hero-content { z-index: 2; }
         
         .hero p { 
-            font-size: 1rem; 
+            font-size: 1.1rem; 
             font-weight: 300; 
-            letter-spacing: 4px; 
-            margin-bottom: 30px; 
-            opacity: 0.8; 
+            letter-spacing: 5px; 
+            margin-bottom: 25px; 
+            opacity: 0.9; 
             text-transform: uppercase;
         }
 
+        /* Кнопка БЕЗ РАМОК */
         .btn-outline {
             display: inline-block;
-            padding: 14px 40px;
-            border: 1px solid #fff;
+            padding: 10px 0; /* Убрали боковые паддинги, так как рамки нет */
+            border: none;    /* УБРАЛИ РАМКУ */
             color: #fff;
             text-decoration: none;
-            font-size: 0.7rem;
-            background: rgba(0,0,0,0.3); /* Легкий фон для читаемости на фото */
-            letter-spacing: 2px;
+            font-size: 0.8rem;
+            background: transparent; 
+            letter-spacing: 3px;
             text-transform: uppercase;
             transition: 0.4s;
+            position: relative;
         }
+
+        /* Эффект при наведении — просто подчеркивание или свечение */
         .btn-outline:hover {
-            background: #fff;
-            color: #000;
+            color: #fff;
+            opacity: 0.6;
+            letter-spacing: 5px; /* Небольшая анимация разлета букв */
         }
 
         /* Социальные сети */
