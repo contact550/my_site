@@ -1,36 +1,52 @@
-/* Общие настройки */
-* { margin: 0; padding: 0; box-box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; scroll-behavior: smooth; }
-.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-.bg-light { background: #f9f9f9; }
-h2 { text-align: center; margin-bottom: 30px; font-size: 2.5rem; }
+/* Core Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #2d3436; line-height: 1.6; scroll-behavior: smooth; }
+.container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+.bg-light { background: #f8f9fa; }
+h2 { text-align: center; margin-bottom: 40px; font-size: 2.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
-/* Шапка */
-header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+/* Navigation */
+header { background: #ffffff; box-shadow: 0 1px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
 header .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
-.logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 2px; }
+.logo { font-weight: 800; font-size: 1.4rem; color: #000; text-decoration: none; }
 nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: #333; font-weight: 500; transition: 0.3s; }
+nav ul li { margin-left: 25px; }
+nav ul li a { text-decoration: none; color: #636e72; font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
 nav ul li a:hover { color: #007bff; }
 
-/* Герой-баннер */
-.hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
-.btn { display: inline-block; background: #007bff; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: 0.3s; border: none; cursor: pointer; }
-.btn:hover { background: #0056b3; }
+/* Hero Banner */
+.hero { height: 75vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero h1 { font-size: 4rem; font-weight: 900; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; opacity: 0.9; }
+.btn { display: inline-block; background: #007bff; color: white; padding: 14px 35px; text-decoration: none; border-radius: 50px; margin-top: 25px; transition: 0.3s; font-weight: 600; border: none; cursor: pointer; }
+.btn:hover { background: #0056b3; transform: translateY(-2px); }
 
-/* Сетка услуг */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.card { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-.card i { font-size: 3rem; color: #007bff; margin-bottom: 15px; }
+/* About Grid */
+.about-grid { display: flex; gap: 40px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.text { flex: 1; min-width: 300px; font-size: 1.1rem; }
+.info-box { background: #007bff; color: white; padding: 30px; border-radius: 15px; min-width: 280px; }
+.info-box p { margin-bottom: 10px; }
 
-/* Форма */
+/* Service Cards */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { background: white; padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
+.card i { font-size: 2.5rem; color: #007bff; margin-bottom: 20px; }
+.card h3 { margin-bottom: 15px; }
+
+/* Form */
 .contact-form { max-width: 600px; margin: auto; display: flex; flex-direction: column; }
-.contact-form input, .contact-form textarea { padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; }
-.contact-form textarea { height: 100px; }
+.contact-form input, .contact-form textarea { padding: 15px; margin-bottom: 15px; border: 1px solid #dfe6e9; border-radius: 8px; font-size: 1rem; }
+.contact-form textarea { height: 120px; resize: vertical; }
 
-/* Футер */
-footer { background: #222; color: white; text-align: center; padding: 30px; }
-.socials { margin-top: 15px; font-size: 1.5rem; }
-.socials a { color: white; margin: 0 10px; }
+/* Footer */
+footer { background: #1e272e; color: #dcdde1; text-align: center; padding: 50px 20px; }
+.socials { margin-top: 20px; }
+.socials a { color: white; margin: 0 15px; font-size: 1.5rem; transition: 0.3s; }
+.socials a:hover { color: #007bff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    nav { display: none; } /* Better to add a mobile menu later */
+}
