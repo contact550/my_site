@@ -48,43 +48,41 @@
             }
         }
 
-        /* МОБИЛЬНАЯ Версия */
+        /* МОБИЛЬНАЯ Версия (Контент сверху) */
         @media screen and (max-width: 768px) {
             .hero {
                 background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('mobile.jpg') !important;
                 background-position: center center !important;
                 padding: 0 30px;
-                /* Центрируем контент, чтобы он был выше иконок */
-                align-items: center; 
+                align-items: flex-start; /* Прижимаем к верху */
                 justify-content: center;
                 text-align: center;
             }
             .hero-content {
-                /* Поднимаем блок чуть выше визуального центра */
-                margin-top: -100px; 
+                margin-top: 140px; /* Отступ от логотипа сверху */
             }
-            .top-nav { padding: 30px; }
+            .top-nav { padding: 30px; justify-content: center; } /* Лого по центру на мобиле */
         }
 
         .hero-content { z-index: 2; }
         
         .hero p { 
-            font-size: 1.1rem; 
+            font-size: 1rem; 
             font-weight: 300; 
-            letter-spacing: 5px; 
-            margin-bottom: 40px; 
+            letter-spacing: 4px; 
+            margin-bottom: 30px; 
             opacity: 0.8; 
             text-transform: uppercase;
         }
 
         .btn-outline {
             display: inline-block;
-            padding: 15px 45px;
+            padding: 14px 40px;
             border: 1px solid #fff;
             color: #fff;
             text-decoration: none;
-            font-size: 0.75rem;
-            background: transparent;
+            font-size: 0.7rem;
+            background: rgba(0,0,0,0.3); /* Легкий фон для читаемости на фото */
             letter-spacing: 2px;
             text-transform: uppercase;
             transition: 0.4s;
@@ -110,7 +108,7 @@
             .footer-social { 
                 right: 0;
                 left: 0;
-                justify-content: center; /* Центрируем иконки на мобильном */
+                justify-content: center; 
                 bottom: 40px; 
             }
         }
@@ -119,8 +117,7 @@
 <body>
 
     <nav class="top-nav">
-        <div class="menu-links">
-        </div>
+        <div class="logo">SERGEI SHMAL</div>
     </nav>
 
     <section class="hero">
