@@ -10,23 +10,39 @@
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #000; 
+            color: #fff; 
+            overflow: hidden; 
+        }
 
         /* Шапка */
         .top-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 80px;
-            background: #000;
-            border-bottom: 1px solid #222;
+            padding: 30px 80px;
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
         }
         .logo { font-size: 1.1rem; letter-spacing: 4px; font-weight: 600; }
-        .menu-links a { color: #fff; text-decoration: none; margin-left: 30px; font-size: 0.75rem; opacity: 0.8; }
+        .menu-links a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 0.8rem; 
+            letter-spacing: 2px;
+            opacity: 0.7; 
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .menu-links a:hover { opacity: 1; }
 
         /* Главная секция (Hero) */
         .hero {
-            height: 75vh;
+            height: 100vh;
             position: relative;
             display: flex;
             align-items: center;
@@ -34,59 +50,82 @@
             background-repeat: no-repeat;
         }
 
-        /* Настройка для КОМПЬЮТЕРОВ */
+        /* ПК Версия */
         @media screen and (min-width: 769px) {
             .hero {
-                background-image: linear-gradient(to right, rgba(0,0,0,0.5), transparent), url('hero-photo.jpeg');
+                background-image: linear-gradient(to right, rgba(0,0,0,0.6), transparent), url('hero-photo.jpeg');
                 background-position: center center;
                 padding-left: 10%;
-                background-attachment: fixed;
             }
         }
 
-        /* Настройка для МОБИЛЬНЫХ */
+        /* МОБИЛЬНАЯ Версия */
         @media screen and (max-width: 768px) {
             .hero {
-                background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), url('mobile.jpg') !important;
+                background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('mobile.jpg') !important;
                 background-position: center center !important;
-                height: 85vh !important;
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 30px;
+                padding-right: 30px;
                 align-items: flex-end;
-                padding-bottom: 60px;
+                padding-bottom: 100px;
             }
-            .hero h1 { font-size: 2.2rem !important; }
-            .menu-links { display: none; }
-            .top-nav { padding: 15px 20px; }
+            .hero h1 { font-size: 2.8rem !important; }
+            .top-nav { padding: 30px; }
         }
 
         .hero-content { z-index: 2; }
-        .hero h1 { font-size: 3.5rem; letter-spacing: 8px; font-weight: 600; margin-bottom: 5px; text-transform: uppercase; }
-        .hero p { font-size: 1.2rem; font-weight: 300; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.9; }
-
-        .btn-outline {
-            display: inline-block;
-            padding: 12px 25px;
-            border: 1px solid #fff;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.7rem;
-            margin-right: 15px;
-            background: rgba(0,0,0,0.1);
-            letter-spacing: 1px;
+        .hero h1 { 
+            font-size: 4.5rem; 
+            letter-spacing: 12px; 
+            font-weight: 600; 
+            margin-bottom: 10px; 
+            text-transform: uppercase; 
+        }
+        .hero p { 
+            font-size: 1.1rem; 
+            font-weight: 300; 
+            letter-spacing: 5px; 
+            margin-bottom: 40px; 
+            opacity: 0.8; 
             text-transform: uppercase;
         }
 
-        /* Черная полоса навигации под фото */
-        .sub-nav { background: #111; padding: 25px 0; border-bottom: 1px solid #222; text-align: center; }
-        .sub-container a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 0.7rem; letter-spacing: 2px; opacity: 0.5; text-transform: uppercase; }
-        .sub-nav a.active { opacity: 1; border-bottom: 1px solid #fff; padding-bottom: 5px; }
+        .btn-outline {
+            display: inline-block;
+            padding: 15px 45px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.75rem;
+            background: transparent;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+        .btn-outline:hover {
+            background: #fff;
+            color: #000;
+        }
 
-        /* Секция галереи */
-        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); background: #000; }
-        @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-        .item img { width: 100%; height: 280px; object-fit: cover; opacity: 0.4; transition: 0.5s; cursor: pointer; }
-        .item img:hover { opacity: 1; }
+        /* Социальные сети */
+        .footer-social {
+            position: absolute;
+            bottom: 40px;
+            right: 80px;
+            display: flex;
+            gap: 25px;
+            z-index: 10;
+        }
+        .footer-social a { color: #fff; font-size: 1.3rem; opacity: 0.5; transition: 0.3s; }
+        .footer-social a:hover { opacity: 1; }
+
+        @media screen and (max-width: 768px) {
+            .footer-social { 
+                right: auto; 
+                left: 30px; 
+                bottom: 40px; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -94,32 +133,26 @@
     <nav class="top-nav">
         <div class="logo">SERGEI SHMAL</div>
         <div class="menu-links">
-            <a href="#">HOME</a>
-            <a href="#">BIO</a>
-            <a href="#">MUSIC</a>
-            <a href="#">CONTACT</a>
+            <a href="mailto:contact@sergeishmal.com">CONTACT</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
             <h1>SERGEI SHMAL</h1>
-            <p>Where Emotion Meets Sound</p>
+            <p>Official Website</p>
             <div class="hero-btns">
-                <a href="#" class="btn-outline">Listen</a>
-                <a href="#" class="btn-outline">Connect</a>
+                <a href="mailto:contact@sergeishmal.com" class="btn-outline">Get in Touch</a>
             </div>
         </div>
     </section>
 
-    <div class="sub-nav">
-        <div class="sub-container">
-            <a href="#" class="active">Bio</a>
-            <a href="#">Music</a>
-            <a href="#">Photos</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
-        </div>
+    <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-spotify"></i></a>
+        <a href="#"><i class="fab fa-apple"></i></a>
     </div>
+
 </body>
 </html>
