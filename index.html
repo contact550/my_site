@@ -22,17 +22,16 @@
         /* Главный экран */
         .hero {
             height: 100vh; width: 100%;
-            /* Позиционируем фото так, чтобы лицо было максимально справа (80% по горизонтали) */
+            /* Пытаемся загрузить .jpeg. Если не сработает, проверьте расширение файла в GitHub */
             background: linear-gradient(to right, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0) 60%), 
                         url('hero-photo.jpeg') no-repeat 80% center;
             background-size: cover; 
             display: flex; 
             align-items: center; 
-            padding-left: 8%; /* Отступ от левого края */
+            padding-left: 8%;
         }
 
         .hero-content { 
-            /* Ограничиваем ширину текста, чтобы он не доходил до лица */
             max-width: 45%; 
             z-index: 10; 
             animation: fadeIn 1.5s ease-in-out; 
@@ -56,7 +55,6 @@
             letter-spacing: 0.5px; 
         }
 
-        /* Кнопки */
         .btn-outline {
             display: inline-block; padding: 12px 30px; border: 1px solid rgba(255,255,255,0.6);
             color: #fff; text-decoration: none; font-size: 0.8rem; margin-right: 15px; 
@@ -64,7 +62,6 @@
         }
         .btn-outline:hover { background: #fff; color: #000; border-color: #fff; }
 
-        /* Нижнее меню */
         .sub-nav { background: #0a0a0a; padding: 25px 0; text-align: center; border-top: 1px solid #1a1a1a; }
         .sub-nav a { color: #fff; text-decoration: none; margin: 0 20px; font-size: 0.8rem; letter-spacing: 3px; opacity: 0.5; transition: 0.3s; }
 
@@ -73,22 +70,15 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
-        /* Адаптивность для мобильных устройств */
-        @media (max-width: 1024px) {
-            .hero-content { max-width: 60%; } /* На планшетах чуть шире */
-        }
-
         @media (max-width: 768px) {
             .hero { 
                 padding: 0 20px; 
                 text-align: center; 
                 justify-content: center; 
-                /* На мобильных затемняем фото сильнее, так как текст будет по центру */
                 background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-photo.jpeg') no-repeat center center;
                 background-size: cover;
             }
             .hero-content { max-width: 100%; }
-            .hero-title { font-size: 1.6rem; }
             .top-nav { padding: 30px 20px; flex-direction: column; gap: 15px; }
             .menu-links { margin: 0; }
         }
@@ -113,10 +103,10 @@
                 cinematic soundscapes, and powerful lyrics to create music that resonates 
                 across borders. Discover the journey. Feel the music. Live the story.
             </p>
-           <div class="hero-btns">
-    <a href="https://open.spotify.com/artist/3B2UVv3cJa463lPXOtREAg" target="_blank" class="btn-outline">Listen Now</a>
-    <a href="https://www.youtube.com/@SergeiShmal" target="_blank" class="btn-outline">Watch Videos</a>
-</div>
+            <div class="hero-btns">
+                <a href="https://open.spotify.com/artist/3B2UVv3cJa463lPXOtREAg" target="_blank" class="btn-outline">Listen Now</a>
+                <a href="https://www.youtube.com/@SergeiShmal" target="_blank" class="btn-outline">Watch Videos</a>
+            </div>
         </div>
     </section>
 
