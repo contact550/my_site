@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* --- ВСЕ СТИЛИ ТЕПЕРЬ ТУТ --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
 
@@ -45,10 +44,9 @@
             }
         }
 
-        /* Настройка для МОБИЛЬНЫХ (Ваше лицо в центре) */
+        /* Настройка для МОБИЛЬНЫХ */
         @media screen and (max-width: 768px) {
             .hero {
-                /* Используем mobile.jpg */
                 background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), url('mobile.jpg') !important;
                 background-position: center center !important;
                 height: 85vh !important;
@@ -57,35 +55,37 @@
                 align-items: flex-end;
                 padding-bottom: 60px;
             }
-            .hero h1 { font-size: 2.2rem !important; color: white !important; } /* Цвет белый, если сработало */
+            .hero h1 { font-size: 2.2rem !important; }
             .menu-links { display: none; }
             .top-nav { padding: 15px 20px; }
         }
 
         .hero-content { z-index: 2; }
-        .hero h1 { font-size: 3.5rem; letter-spacing: 8px; font-weight: 600; margin-bottom: 5px; }
-        .hero p { font-size: 1.4rem; font-weight: 300; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.9; }
+        .hero h1 { font-size: 3.5rem; letter-spacing: 8px; font-weight: 600; margin-bottom: 5px; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; font-weight: 300; letter-spacing: 2px; margin-bottom: 30px; opacity: 0.9; }
 
         .btn-outline {
             display: inline-block;
-            padding: 10px 25px;
+            padding: 12px 25px;
             border: 1px solid #fff;
             color: #fff;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             margin-right: 15px;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.1);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* Черная полоса под фото */
+        /* Черная полоса навигации под фото */
         .sub-nav { background: #111; padding: 25px 0; border-bottom: 1px solid #222; text-align: center; }
-        .sub-container a { color: #fff; text-decoration: none; margin: 0 20px; font-size: 0.8rem; letter-spacing: 2px; opacity: 0.5; }
-        .sub-nav a.active { opacity: 1; border-bottom: 2px solid #fff; padding-bottom: 5px; }
+        .sub-container a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 0.7rem; letter-spacing: 2px; opacity: 0.5; text-transform: uppercase; }
+        .sub-nav a.active { opacity: 1; border-bottom: 1px solid #fff; padding-bottom: 5px; }
 
-        /* Галерея */
+        /* Секция галереи */
         .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); background: #000; }
         @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
-        .item img { width: 100%; height: 250px; object-fit: cover; opacity: 0.5; transition: 0.5s; }
+        .item img { width: 100%; height: 280px; object-fit: cover; opacity: 0.4; transition: 0.5s; cursor: pointer; }
         .item img:hover { opacity: 1; }
     </style>
 </head>
@@ -97,7 +97,6 @@
             <a href="#">HOME</a>
             <a href="#">BIO</a>
             <a href="#">MUSIC</a>
-            <a href="#">AWARDS</a>
             <a href="#">CONTACT</a>
         </div>
     </nav>
@@ -107,63 +106,30 @@
             <h1>SERGEI SHMAL</h1>
             <p>Where Emotion Meets Sound</p>
             <div class="hero-btns">
-
-                <a href="https://open.spotify.com/artist/3B2UVv3cJa463lPXOtREAg" target="_blank" class="btn-outline">Listen Now</a>
-                <a href="https://www.youtube.com/@SergeiShmal" target="_blank" class="btn-outline">Watch Videos</a>
-
+                <a href="#" class="btn-outline">Listen</a>
+                <a href="#" class="btn-outline">Connect</a>
             </div>
         </div>
     </section>
 
     <div class="sub-nav">
         <div class="sub-container">
-            <a href="#" class="active">BIO</a>
-            <a href="#">BIO</a>
-            <a href="#">MUSIC</a>
-            <a href="#">AWARDS</a>
-            <a href="#">CONTACT</a>
+            <a href="#" class="active">Bio</a>
+            <a href="#">Music</a>
+            <a href="#">Photos</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
         </div>
     </div>
 
-   <section id="music" style="padding: 60px 20px; background: #000;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="text-align: center; letter-spacing: 5px; margin-bottom: 40px; font-weight: 300; text-transform: uppercase;">Latest Videos</h2>
-        
-        <div class="video-grid">
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/SshMhB_7mC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/5N370qO8fXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+    <section class="gallery">
+        <div class="gallery-grid">
+            <div class="item"><img src="hero-photo.jpeg" alt="1"></div>
+            <div class="item"><img src="mobile.jpg" alt="2"></div>
+            <div class="item"><img src="hero-photo.jpeg" alt="3"></div>
+            <div class="item"><img src="mobile.jpg" alt="4"></div>
         </div>
+    </section>
 
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="https://www.youtube.com/@SergeiShmal" target="_blank" class="btn-outline" style="border-color: #ff0000; color: #fff;">
-                <i class="fab fa-youtube" style="margin-right: 10px; color: #ff0000;"></i> Subscribe on YouTube
-            </a>
-        </div>
-    </div>
-</section>
-
-<style>
-    .video-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-    }
-    .video-item {
-        position: relative;
-        padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
-        height: 0;
-        overflow: hidden;
-        border: 1px solid #222;
-    }
-    .video-item iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
+</body>
+</html>
