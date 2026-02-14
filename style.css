@@ -1,73 +1,74 @@
-/* --- 1. МОБИЛЬНАЯ ВЕРСИЯ (ТЕПЕРЬ ПЕРВАЯ ПО ПРИОРИТЕТУ) --- */
-@media screen and (max-width: 768px) {
-    .hero {
-        /* Принудительно ставим мобильное фото */
-        background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), 
-                          url('mobile.jpg') !important;
-        background-position: center center !important;
-        background-size: cover !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
-        
-        height: 85vh !important;
-        display: flex !important;
-        align-items: flex-end !important;
-        padding-bottom: 60px !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-    }
-
-    .hero-content {
-        text-align: left !important;
-        width: 100% !important;
-    }
-
-    .hero h1 { font-size: 2.2rem !important; letter-spacing: 4px !important; }
-    .hero p { font-size: 1rem !important; }
-    .top-nav { padding: 15px 20px !important; }
-    .menu-links { display: none !important; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+/* Убираем все отступы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- 2. ВЕРСИЯ ДЛЯ КОМПЬЮТЕРОВ (ПК) --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* --- СЕКЦИЯ HERO (ОБЩИЕ СТИЛИ) --- */
+.hero {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* --- ВЕРСИЯ ДЛЯ ПК (Экран шире 768px) --- */
 @media screen and (min-width: 769px) {
     .hero {
-        height: 75vh;
-        background: linear-gradient(to right, rgba(0,0,0,0.5), transparent), 
-                    url('hero-photo.jpeg') no-repeat center center/cover;
-        position: relative;
-        display: flex;
-        align-items: center;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.5), transparent), 
+                          url('hero-photo.jpeg'); /* Проверьте .jpeg или .jpg */
+        background-position: center center;
         padding-left: 10%;
-        background-attachment: fixed;
     }
 }
 
-/* --- 3. ОБЩИЕ СТИЛИ (ОСТАВЬТЕ КАК ЕСТЬ) --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Montserrat', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
+/* --- ВЕРСИЯ ДЛЯ МОБИЛЬНЫХ (Экран 768px и меньше) --- */
+@media screen and (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), 
+                          url('mobile.jpg') !important; /* Ваше новое фото */
+        background-position: center center !important;
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: flex-end;
+        padding-bottom: 50px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem !important;
+    }
+}
 
+/* ОСТАЛЬНЫЕ СТИЛИ */
 .top-nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 80px;
+    padding: 20px 50px;
     background: #000;
     border-bottom: 1px solid #222;
 }
 
-.logo { font-size: 1.1rem; letter-spacing: 4px; font-weight: 600; }
-
-.menu-links a { 
-    color: #fff; text-decoration: none; margin-left: 30px; 
-    font-size: 0.75rem; letter-spacing: 1px; opacity: 0.8; 
+.hero-content h1 {
+    font-size: 4rem;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
 }
 
-.sub-nav { background: #111; padding: 25px 0; border-bottom: 1px solid #222; }
-.sub-container { display: flex; justify-content: center; gap: 40px; }
-.sub-nav a { color: #fff; text-decoration: none; font-size: 0.8rem; letter-spacing: 3px; opacity: 0.5; }
-.sub-nav a.active { opacity: 1; border-bottom: 2px solid #fff; }
-
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); background: #000; }
-.item img { width: 100%; height: 300px; object-fit: cover; opacity: 0.5; transition: 0.5s; }
-.item img:hover { opacity: 1; }
+.hero-btns .btn-outline {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
