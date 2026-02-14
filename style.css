@@ -1,74 +1,35 @@
-/* Убираем все отступы */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* 1. БАЗОВЫЕ СТИЛИ (ОБЩИЕ) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Montserrat', sans-serif; background-color: #000; color: #fff; }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    color: #fff;
-}
+.top-nav { display: flex; justify-content: space-between; padding: 20px 50px; background: #000; border-bottom: 1px solid #222; }
+.hero { height: 80vh; width: 100%; position: relative; display: flex; align-items: center; background-size: cover; background-repeat: no-repeat; }
+.hero-content h1 { font-size: 4rem; letter-spacing: 8px; }
 
-/* --- СЕКЦИЯ HERO (ОБЩИЕ СТИЛИ) --- */
-.hero {
-    height: 80vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* --- ВЕРСИЯ ДЛЯ ПК (Экран шире 768px) --- */
+/* 2. СТИЛИ ДЛЯ КОМПЬЮТЕРА (Шире 768px) */
 @media screen and (min-width: 769px) {
     .hero {
-        background-image: linear-gradient(to right, rgba(0,0,0,0.5), transparent), 
-                          url('hero-photo.jpeg'); /* Проверьте .jpeg или .jpg */
+        background-image: linear-gradient(to right, rgba(0,0,0,0.5), transparent), url('hero-photo.jpeg');
         background-position: center center;
         padding-left: 10%;
     }
 }
 
-/* --- ВЕРСИЯ ДЛЯ МОБИЛЬНЫХ (Экран 768px и меньше) --- */
+/* 3. СТИЛИ ДЛЯ МОБИЛЬНОГО (768px и меньше) */
 @media screen and (max-width: 768px) {
     .hero {
-        background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), 
-                          url('mobile.jpg') !important; /* Ваше новое фото */
+        /* ВНИМАНИЕ: Проверьте, что файл называется именно mobile.jpg в GitHub */
+        background-image: linear-gradient(to top, rgba(0,0,0,0.7), transparent), url('mobile.jpg') !important;
         background-position: center center !important;
+        background-attachment: scroll !important;
         padding-left: 20px;
-        padding-right: 20px;
         align-items: flex-end;
         padding-bottom: 50px;
     }
-    
+
+    /* ДИАГНОСТИКА: Если на телефоне имя станет красным — значит код сработал, но фото не нашлось */
     .hero h1 {
         font-size: 2.2rem !important;
+        color: red !important; 
     }
-}
-
-/* ОСТАЛЬНЫЕ СТИЛИ */
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #000;
-    border-bottom: 1px solid #222;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    letter-spacing: 8px;
-    margin-bottom: 10px;
-}
-
-.hero-btns .btn-outline {
-    display: inline-block;
-    padding: 10px 25px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    margin-right: 10px;
 }
