@@ -1,76 +1,64 @@
-/* Базовые настройки */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { 
-    font-family: 'Montserrat', sans-serif; 
-    background-color: #0a0a0a; 
-    color: #ffffff; 
-    scroll-behavior: smooth; 
+/* Главное имя - делаем его как на картинке */
+.artist-name { 
+    font-family: 'Montserrat', sans-serif; /* На картинке более современный гротеск */
+    font-size: 5.5rem; 
+    letter-spacing: 12px; 
+    margin-bottom: 5px; 
+    font-weight: 600; /* Полужирный, но чистый */
+    text-transform: uppercase;
 }
 
-/* Навигация */
-.navbar {
-    position: fixed;
-    top: 0; width: 100%;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 25px 50px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-    z-index: 1000;
+.tagline { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; 
+    letter-spacing: 3px; 
+    font-weight: 300; /* Тонкий подзаголовок */
+    margin-bottom: 40px; 
+    opacity: 0.9;
 }
-.logo { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 5px; font-size: 1.4rem; }
-.nav-links { display: flex; list-style: none; }
-.nav-links li { margin-left: 30px; }
-.nav-links a { text-decoration: none; color: #fff; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; opacity: 0.7; }
-.nav-links a:hover { opacity: 1; }
 
-/* Герой-секция (Главный баннер) */
-.hero {
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1920') no-repeat center center/cover;
-    display: flex; align-items: center; justify-content: center; text-align: center; position: relative;
+/* Кнопки как на превью */
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent, #0a0a0a); }
-.hero-content { position: relative; z-index: 1; }
-.artist-name { font-family: 'Cinzel', serif; font-size: 5rem; letter-spacing: 15px; margin-bottom: 10px; font-weight: 400; }
-.tagline { font-size: 1rem; text-transform: uppercase; letter-spacing: 8px; opacity: 0.8; margin-bottom: 40px; }
 
-/* Кнопки */
 .btn-main, .btn-sub { 
-    display: inline-block; padding: 15px 40px; text-decoration: none; text-transform: uppercase; 
-    letter-spacing: 2px; font-size: 0.8rem; margin: 10px; transition: 0.4s;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 12px 30px;
+    font-size: 0.8rem;
+    text-transform: capitalize; /* Только первая заглавная */
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
-.btn-main { background: #fff; color: #000; border: 1px solid #fff; }
-.btn-sub { border: 1px solid #fff; color: #fff; }
-.btn-main:hover { background: transparent; color: #fff; }
-.btn-sub:hover { background: #fff; color: #000; }
 
-/* Секции */
-.section { padding: 120px 20px; text-align: center; }
-.section.dark { background: #111; }
-.container { max-width: 1000px; margin: auto; }
-.section-title { font-family: 'Cinzel', serif; font-size: 2.5rem; letter-spacing: 5px; margin-bottom: 20px; }
-.divider { width: 60px; height: 1px; background: #fff; margin: 0 auto 40px; opacity: 0.5; }
-.bio-text { font-size: 1.1rem; font-weight: 200; line-height: 1.8; color: #ccc; }
+.btn-main:hover, .btn-sub:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: #fff;
+}
 
-/* Сетка музыки */
-.music-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px; }
-.music-card img { width: 100%; border-radius: 4px; filter: grayscale(50%); transition: 0.5s; }
-.music-card:hover img { filter: grayscale(0%); transform: scale(1.02); }
-.music-card h3 { margin-top: 15px; font-size: 1rem; letter-spacing: 1px; }
+/* Стрелки по бокам */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    padding: 20px 15px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.slider-arrow:hover { opacity: 1; background: rgba(0,0,0,0.5); }
+.left { left: 0; }
+.right { right: 0; }
 
-/* Награды */
-.award-item { margin-bottom: 40px; }
-.award-item h3 { font-size: 1.2rem; color: #fff; }
-.year { font-size: 0.8rem; color: #888; letter-spacing: 2px; }
-
-/* Футер */
-footer { padding: 100px 20px; text-align: center; border-top: 1px solid #222; }
-.social-icons a { color: #fff; margin: 0 15px; text-decoration: none; opacity: 0.6; font-size: 0.9rem; }
-.social-icons a:hover { opacity: 1; }
-.copyright { margin-top: 50px; font-size: 0.7rem; opacity: 0.4; letter-spacing: 2px; }
-
-/* Мобильная версия */
-@media (max-width: 768px) {
-    .artist-name { font-size: 2.5rem; letter-spacing: 5px; }
-    .navbar { padding: 20px; justify-content: center; }
-    .nav-links { display: none; } /* Можно добавить бургер-меню */
+/* Навигация (Navbar) как на картинке */
+.navbar {
+    background: rgba(0,0,0,0.8); /* Темный фон меню */
+    padding: 15px 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
