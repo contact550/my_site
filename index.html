@@ -3,87 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergei Shmal | Official Website</title>
+    <title>SERGEI SHMAL</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">SERGEI SHMAL</div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav class="navbar">
+        <div class="logo">SERGEI SHMAL</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section class="hero">
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Building Digital Solutions</h1>
-            <p>Welcome to my professional space</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+            <h1>SERGEI SHMAL</h1>
+            <p class="subtitle">Creative Visionary & Professional</p>
+            <a href="#about" class="btn-outline">Explore</a>
         </div>
     </section>
 
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <div class="about-grid">
-            <div class="text">
-                <p>Hello! I am Sergei Shmal. This website is built from scratch to showcase my work and projects. Unlike template builders, this site is optimized for speed and complete creative freedom.</p>
-            </div>
-            <div class="info-box">
-                <p><strong>Location:</strong> Remote / Worldwide</p>
-                <p><strong>Expertise:</strong> Web Development / Design</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="bg-light">
+    <section id="about" class="content-section">
         <div class="container">
-            <h2>My Services</h2>
-            <div class="services-grid">
-                <div class="card">
-                    <i class="fas fa-code"></i>
-                    <h3>Development</h3>
-                    <p>Clean, efficient code for modern web applications.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Design</h3>
-                    <p>Creating intuitive and engaging user experiences.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-rocket"></i>
-                    <h3>Optimization</h3>
-                    <p>Improving performance and search engine visibility.</p>
-                </div>
-            </div>
+            <h2>About Me</h2>
+            <div class="divider"></div>
+            <p>I focus on delivering high-quality digital experiences. This site is now fully independent, hosted on GitHub, and built for speed.</p>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <h2>Contact Me</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+    <section id="contact" class="content-section dark">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="divider"></div>
+            <p>Email: info@sergeishmal.com</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Sergei Shmal. All rights reserved.</p>
-        <div class="socials">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
+        <p>&copy; 2026 BY SERGEI SHMAL</p>
     </footer>
 
 </body>
