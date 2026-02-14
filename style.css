@@ -108,3 +108,30 @@ body {
     border-bottom: 1px solid #fff;
     padding-bottom: 5px;
 }
+/* Исправление для мобильных телефонов */
+@media (max-width: 768px) {
+    .hero {
+        /* background-position: 80% center; — этот параметр сдвигает фото так, чтобы ваше лицо было видно */
+        background-position: 80% center; 
+        height: 80vh; /* Увеличим немного высоту на мобильном */
+        padding-left: 5%; /* Уменьшим отступ слева, чтобы текст не теснил фото */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem; /* Уменьшаем размер заголовка, чтобы он влезал в экран */
+        letter-spacing: 5px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .top-nav {
+        padding: 15px 20px;
+    }
+
+    .sub-container {
+        gap: 15px; /* Уменьшаем расстояние между ссылками в черном меню */
+        overflow-x: auto; /* Позволяем меню прокручиваться пальцем, если оно не влезает */
+    }
+}
