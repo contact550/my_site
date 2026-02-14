@@ -28,17 +28,6 @@
             width: 100%;
             z-index: 10;
         }
-        .logo { font-size: 1.1rem; letter-spacing: 4px; font-weight: 600; }
-        .menu-links a { 
-            color: #fff; 
-            text-decoration: none; 
-            font-size: 0.8rem; 
-            letter-spacing: 2px;
-            opacity: 0.7; 
-            transition: 0.3s;
-            text-transform: uppercase;
-        }
-        .menu-links a:hover { opacity: 1; }
 
         /* Главная секция (Hero) */
         .hero {
@@ -64,23 +53,21 @@
             .hero {
                 background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('mobile.jpg') !important;
                 background-position: center center !important;
-                padding-left: 30px;
-                padding-right: 30px;
-                align-items: flex-end;
-                padding-bottom: 100px;
+                padding: 0 30px;
+                /* Центрируем контент, чтобы он был выше иконок */
+                align-items: center; 
+                justify-content: center;
+                text-align: center;
             }
-            .hero h1 { font-size: 2.8rem !important; }
+            .hero-content {
+                /* Поднимаем блок чуть выше визуального центра */
+                margin-top: -100px; 
+            }
             .top-nav { padding: 30px; }
         }
 
         .hero-content { z-index: 2; }
-        .hero h1 { 
-            font-size: 4.5rem; 
-            letter-spacing: 12px; 
-            font-weight: 600; 
-            margin-bottom: 10px; 
-            text-transform: uppercase; 
-        }
+        
         .hero p { 
             font-size: 1.1rem; 
             font-weight: 300; 
@@ -121,8 +108,9 @@
 
         @media screen and (max-width: 768px) {
             .footer-social { 
-                right: auto; 
-                left: 30px; 
+                right: 0;
+                left: 0;
+                justify-content: center; /* Центрируем иконки на мобильном */
                 bottom: 40px; 
             }
         }
@@ -146,11 +134,8 @@
 
     <div class="footer-social">
         <a href="https://www.instagram.com/sergeishmalofficial" target="_blank"><i class="fab fa-instagram"></i></a>
-        
         <a href="https://www.youtube.com/@SergeiShmal" target="_blank"><i class="fab fa-youtube"></i></a>
-        
         <a href="https://open.spotify.com/artist/3B2UVv3cJa463lPXOtREAg" target="_blank"><i class="fab fa-spotify"></i></a>
-        
         <a href="https://music.apple.com/artist/1465232106" target="_blank"><i class="fab fa-apple"></i></a>
     </div>
 
