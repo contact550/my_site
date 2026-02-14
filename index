@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сергей Шмаль | Личный сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">СЕРГЕЙ ШМАЛЬ</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Работы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Создаю цифровые решения</h1>
+            <p>Добро пожаловать на мой авторский проект</p>
+            <a href="#contact" class="btn">Связаться со мной</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>Обо мне</h2>
+        <div class="about-grid">
+            <div class="text">
+                <p>Здесь вы можете написать свою краткую биографию, цели и то, чем вы занимаетесь. В отличие от Wix, здесь вы полностью контролируете каждое слово и пиксель.</p>
+            </div>
+            <div class="info-box">
+                <p><strong>Локация:</strong> Мир / Удаленно</p>
+                <p><strong>Специализация:</strong> Разработка / Дизайн</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light">
+        <div class="container">
+            <h2>Мои Услуги</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <i class="fas fa-code"></i>
+                    <h3>Разработка</h3>
+                    <p>Создание сайтов без конструкторов.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Дизайн</h3>
+                    <p>Индивидуальный стиль для вашего бренда.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Продвижение</h3>
+                    <p>SEO и техническая оптимизация.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Связаться со мной</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш Email" required>
+            <textarea placeholder="Ваше сообщение"></textarea>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Сергей Шмаль. Все права защищены.</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
