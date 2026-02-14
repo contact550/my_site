@@ -127,15 +127,21 @@
 
    <section id="music" style="padding: 60px 20px; background: #000;">
     <div style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="text-align: center; letter-spacing: 5px; margin-bottom: 40px; font-weight: 300;">LATEST VIDEOS</h2>
+        <h2 style="text-align: center; letter-spacing: 5px; margin-bottom: 40px; font-weight: 300; text-transform: uppercase;">Latest Videos</h2>
         
         <div class="video-grid">
             <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/SshMhB_7mC0" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/SshMhB_7mC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/5N370qO8fXk" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/5N370qO8fXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="https://www.youtube.com/@ВАШ_КАНАЛ" target="_blank" class="btn-outline" style="border-color: #ff0000; color: #fff;">
+                <i class="fab fa-youtube" style="margin-right: 10px; color: #ff0000;"></i> Subscribe on YouTube
+            </a>
         </div>
     </div>
 </section>
@@ -144,12 +150,14 @@
     .video-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
+        gap: 20px;
     }
     .video-item {
         position: relative;
-        padding-bottom: 56.25%; /* Пропорции 16:9 */
+        padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
         height: 0;
+        overflow: hidden;
+        border: 1px solid #222;
     }
     .video-item iframe {
         position: absolute;
@@ -157,6 +165,5 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border: 1px solid #333;
     }
 </style>
