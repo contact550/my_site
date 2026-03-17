@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SERGEI SHMAL | Official Site</title>
     
+    <title>SERGEI SHMAL | Official Site</title>
+    <meta name="description" content="Sergei Shmal - Official Site. Where Emotion Meets Sound. Discover music, media, and latest updates.">
+    <meta name="keywords" content="Sergei Shmal, Music, Composer, Producer, Official Site">
+    <meta name="author" content="Sergei Shmal">
+    
+    <meta property="og:title" content="SERGEI SHMAL | Official Site">
+    <meta property="og:description" content="Where Emotion Meets Sound.">
+    <meta property="og:image" content="https://sergeishmal.com/hero-photo.jpeg">
+    <meta property="og:url" content="https://sergeishmal.com">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -28,7 +38,8 @@
             width: 100%;
             z-index: 10;
         }
-        .logo { font-size: 1.1rem; letter-spacing: 4px; font-weight: 600; text-transform: uppercase; }
+        /* Изменил с div на h1 для SEO, сохранив стиль */
+        h1.logo { font-size: 1.1rem; letter-spacing: 4px; font-weight: 600; text-transform: uppercase; }
 
         /* Главная секция */
         .hero {
@@ -81,8 +92,8 @@
         /* Кнопка БЕЗ РАМОК */
         .btn-outline {
             display: inline-block;
-            padding: 10px 0; /* Убрали боковые паддинги, так как рамки нет */
-            border: none;    /* УБРАЛИ РАМКУ */
+            padding: 10px 0; 
+            border: none;    
             color: #fff;
             text-decoration: none;
             font-size: 0.8rem;
@@ -93,11 +104,10 @@
             position: relative;
         }
 
-        /* Эффект при наведении — просто подчеркивание или свечение */
         .btn-outline:hover {
             color: #fff;
             opacity: 0.6;
-            letter-spacing: 5px; /* Небольшая анимация разлета букв */
+            letter-spacing: 5px; 
         }
 
         /* Социальные сети */
@@ -125,7 +135,7 @@
 <body>
 
     <nav class="top-nav">
-        <div class="logo">SERGEI SHMAL</div>
+        <h1 class="logo">SERGEI SHMAL</h1>
     </nav>
 
     <section class="hero">
@@ -136,16 +146,19 @@
             </div>
         </div>
     </section>
+
     <div class="footer-social">
         <a href="https://www.instagram.com/sergeishmalofficial" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/@SergeiShmal" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://open.spotify.com/artist/3B2UVv3cJa463lPXOtREAg" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://open.spotify.com/artist/4Xp5U7tZksS05L4E0Hq2pM" target="_blank"><i class="fab fa-spotify"></i></a>
         <a href="https://music.apple.com/artist/1465232106" target="_blank"><i class="fab fa-apple"></i></a>
- <div style="position: fixed; bottom: 20px; left: 0; width: 100%; text-align: center; z-index: 999999; pointer-events: none;">
-    <p style="font-family: sans-serif; color: rgba(255,255,255,0.5); font-size: 11px; letter-spacing: 1px; margin: 0;">
-        © 2026 SERGEI SHMAL • ALL RIGHTS RESERVED
-    </p>
-</div>
+    </div>
+
+    <div style="position: fixed; bottom: 20px; left: 0; width: 100%; text-align: center; z-index: 999999; pointer-events: none;">
+        <p style="font-family: sans-serif; color: rgba(255,255,255,0.5); font-size: 11px; letter-spacing: 1px; margin: 0;">
+            © 2026 SERGEI SHMAL • ALL RIGHTS RESERVED
+        </p>
+    </div>
+
 </body>
 </html>
-    
