@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>SERGEI SHMAL | Official Site</title>
+    
     <meta name="description" content="Sergei Shmal - Official Site. Where Emotion Meets Sound. Discover music, media, and latest updates.">
     <meta name="keywords" content="Sergei Shmal, Music, Composer, Producer, Official Site">
     <meta name="author" content="Sergei Shmal">
     
+    <meta property="og:type" content="website">
     <meta property="og:title" content="SERGEI SHMAL | Official Site">
     <meta property="og:description" content="Where Emotion Meets Sound.">
     <meta property="og:image" content="https://sergeishmal.com/hero-photo.jpeg">
     <meta property="og:url" content="https://sergeishmal.com">
-    <meta name="twitter:card" content="summary_large_image">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SERGEI SHMAL | Official Site">
+    <meta name="twitter:description" content="Where Emotion Meets Sound.">
+    <meta name="twitter:image" content="https://sergeishmal.com/hero-photo.jpeg">
+
+    <link rel="icon" href="data:,"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
@@ -24,7 +30,9 @@
             font-family: 'Montserrat', sans-serif; 
             background-color: #000; 
             color: #fff; 
-            overflow: hidden; 
+            /* Изменено для SEO и удобства: разрешаем вертикальный скролл, запрещаем горизонтальный */
+            overflow-x: hidden; 
+            overflow-y: auto;
         }
 
         /* Шапка */
@@ -148,10 +156,10 @@
     </section>
 
     <div class="footer-social">
-        <a href="https://www.instagram.com/sergeishmalofficial" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@SergeiShmal" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://open.spotify.com/artist/3B2UVv3cJa463lPXOtREAg" target="_blank"><i class="fab fa-spotify"></i></a>
-        <a href="https://music.apple.com/artist/1465232106" target="_blank"><i class="fab fa-apple"></i></a>
+        <a href="https://www.instagram.com/sergeishmalofficial" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@SergeiShmal" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/3B2UVv3cJa463lPXOtREAg" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+        <a href="https://music.apple.com/artist/1465232106" target="_blank" aria-label="Apple Music"><i class="fab fa-apple"></i></a>
     </div>
 
     <div style="position: fixed; bottom: 20px; left: 0; width: 100%; text-align: center; z-index: 999999; pointer-events: none;">
